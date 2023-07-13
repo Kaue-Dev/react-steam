@@ -1,15 +1,15 @@
 //Images
-import Image from 'next/image'
+import Image from "next/image";
 //Css
-import styles from './logo.module.css'
+import styles from "./logo.module.css";
 
 const Logo = () => {
-    return (
-        <div className={styles.logo}>
-            <Image src='/logo.svg' width={60} height={60} />
-            <h1>SteamDois</h1>
-        </div>
-    )
-}
+  return (
+    <div className={styles.logo}>
+      <Image src="/logo.svg" width={60} height={60} />
+      <h1>SteamDois</h1>
+    </div>
+  );
+};
 
-export default Logo
+export default Logo;
