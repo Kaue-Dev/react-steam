@@ -1,0 +1,28 @@
+.saleContainer {
+  margin: 80px 0;
+}
+
+.otherGamesContainer {
+  margin: 80px 0;
+}
+
+.saleCardsContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.otherGamesCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+@media (max-widht: 870px) {
+  .saleCardsContainer {
+    justify-content: center;
+  }
+}

@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <div className={styles.logo}>
       <Image src="/logo.svg" width={60} height={60} />
-      <h1>SteamDois</h1>
+      <h1 className={styles.name}>SteamDois</h1>
     </div>
   );
 };

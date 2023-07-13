@@ -4,12 +4,13 @@ import styles from "./navbar.module.css";
 import { BsCart2 } from "react-icons/bs";
 //Components
 import Logo from "@/components/logo/logo";
+import SearchBar from "../searchbar/SearchBar";
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Logo />
-      <input type="text" />
+      <SearchBar type="text" placeholder="Buscar..." fullWidth/>
       <BsCart2 size={40} />
     </nav>
   );

@@ -4,3 +4,9 @@
   gap: 20px;
   font-size: 20px;
 }
+
+@media (max-width: 950px) {
+  .name {
+    display: none;
+  }
+}

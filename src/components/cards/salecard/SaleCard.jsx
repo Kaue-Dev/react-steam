@@ -17,7 +17,7 @@ const SaleCard = () => {
             <h4>R$89,90</h4>
           </div>
         </div>
-        <AddCartButton>Adicionar ao carrinho</AddCartButton>
+        <AddCartButton fullWidth>Adicionar ao carrinho</AddCartButton>
       </div>
     </div>
   )

@@ -1,0 +1,49 @@
+.gameCard {
+  background-color: #2983AA;
+  display: flex;
+}
+
+.gameCard .infos {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infos h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.infos p {
+  color: #C7C7C7;
+  font-size: 16px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.infos .prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.prices h3 {
+  font-size: 32px;
+  color: #BEEB14;
+}
+
+@media (max-width: 730px) {
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .gameCard {
+    flex-direction: column;
+  }
+}
