@@ -1,17 +1,19 @@
 //Css
 import styles from "./navbar.module.css";
-//Icons
-import { BsCart2 } from "react-icons/bs";
 //Components
 import Logo from "@/components/logo/logo";
 import SearchBar from "../searchbar/SearchBar";
+import CartButton from "../cartButton/CartButton";
 
-const Navbar = () => {
+const Navbar = ({ cart, onRemove }) => {
   return (
     <nav className={styles.navbar}>
       <Logo />
       <SearchBar type="text" placeholder="Buscar..." fullWidth/>
-      <BsCart2 size={40} />
+      <CartButton 
+        cart={cart}
+        onRemove={onRemove}
+      />
     </nav>
   );
 };

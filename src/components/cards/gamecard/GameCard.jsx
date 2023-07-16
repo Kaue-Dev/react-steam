@@ -3,20 +3,26 @@ import AddCartButton from '@/components/addcartbutton/AddCartButton'
 
 import Image from 'next/image'
 
-const GameCard = () => {
+const GameCard = ({ image, title, categorys, price, onAdd }) => {
   return (
     <div className={styles.gameCard}>
-      <Image className={styles.image} src="/products/counter-strike.jpg" width={300} height={145} />
+      <Image className={styles.image} src={`/products/${image}`} width={300} height={145} />
       <div className={styles.infos}>
-        <h2>Counter Strike: Global Offensive</h2>
-        <p>Ação, Estratégia, Multijogador</p>
+        <h2>{title}</h2>
+        <p>{categorys}</p>
         <div className={styles.prices}>
-          <h3>R$99,90</h3>
-          <AddCartButton>Adicionar ao carrinho</AddCartButton>
+          <h3>R${price.toFixed(2)}</h3>
+          <AddCartButton onClick={onAdd} >Adicionar ao carrinho</AddCartButton>
         </div>
       </div>
     </div>
   )
+}
+
+//Define props default
+GameCard.defaultProps = {
+  categorys: "Ação, Estratégia, Multijogador",
+  price: 99.90,
 }
 
 export default GameCard

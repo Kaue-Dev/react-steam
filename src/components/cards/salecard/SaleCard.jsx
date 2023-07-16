@@ -4,23 +4,30 @@ import Image from 'next/image'
 
 import AddCartButton from '@/components/addcartbutton/AddCartButton'
 
-const SaleCard = () => {
+const SaleCard = ({ image, discountPercent, fullPrice, discountPrice, onAdd }) => {
   return (
     <div className={styles.saleCard}>
-      <Image src="/products/league-of-legends.jpg" width={250} height={300} />
+      <Image src={`/products/${image}`} alt={`Produto ${image}`} width={250} height={300} />
       <div className={styles.infos}>
         <h3>Oferta Exclusiva</h3>
         <div className={styles.priceCard}>
-          <span>-20%</span>
+          <span>-{discountPercent}</span>
           <div className={styles.prices}>
-            <p>R$99,90</p>
-            <h4>R$89,90</h4>
+            <p>R${fullPrice.toFixed(2)}</p>
+            <h4>R${discountPrice.toFixed(2)}</h4>
           </div>
         </div>
-        <AddCartButton fullWidth>Adicionar ao carrinho</AddCartButton>
+        <AddCartButton fullWidth onClick={onAdd} >Adicionar ao carrinho</AddCartButton>
       </div>
     </div>
   )
+}
+
+//Define props default
+SaleCard.defaultProps = {
+  discountPercent: "50%",
+  fullPrice: 99.90,
+  discountPrice: 49.90,
 }
 
 export default SaleCard

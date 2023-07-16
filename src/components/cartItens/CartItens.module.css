@@ -1,0 +1,32 @@
+.cartItensContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.itemInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+.itemInfos h2, .itemInfos h4 {
+  font-size: 16px;
+}
+
+.itemInfos h4 {
+  color: #beeb14;
+}
+
+.itemInfos span {
+  color: #f00;
+  font-style: italic;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.productImage {
+  object-fit: contain;
+}
